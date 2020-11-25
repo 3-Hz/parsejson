@@ -1,3 +1,5 @@
+var validStrings, invalidStrings;
+
 parseableStrings = [
   // basic stuff
   '[]',
