@@ -4,12 +4,12 @@ describe('parseJSON', function() {
   it('should match the result of calling JSON.parse', function() {
     parseableStrings.forEach(function(test) {
       var result = parseJSON(test);
-      //console.log(result);
+      console.log(result);
       var expected = JSON.parse(test);
       var equality = _.isEqual(result, expected); // why can't we use `===` here?
       // Replace this line with an `expect` statement that tests
       // the behavior described by the `it` string
-      expect(JSON.stringify(result)).to.equal(JSON.stringify(expected));
+      expect(equality).to.equal(true);
     });
   });
 

@@ -26,7 +26,7 @@ var parseJSON = function(json) {
       let initial = true;
 
       while (json[i] !== '}') {
-        checkForUnexpectedEndOfInput()
+        checkForUnexpectedEndOfInput();
         if (!initial) {
           skipComma();
           skipWhiteSpace();
@@ -53,7 +53,7 @@ var parseJSON = function(json) {
       let initial = true;
 
       while (json[i] !== ']') {
-        checkForUnexpectedEndOfInput()
+        checkForUnexpectedEndOfInput();
         if (!initial) {
           skipComma();
         }
@@ -71,7 +71,7 @@ var parseJSON = function(json) {
       i++;
       let result = '';
       while (json[i] !== '"') {
-        checkForUnexpectedEndOfInput()
+        checkForUnexpectedEndOfInput();
         if (json[i] === '\\') {
           const char = json[i + 1];
           if (
@@ -119,7 +119,7 @@ var parseJSON = function(json) {
     } else if (json[i] >= '1' && json[i] <= '9') {
       i++;
       while (json[i] >= '0' && json[i] <= '9') {
-        checkForUnexpectedEndOfInput()
+        checkForUnexpectedEndOfInput();
         i++;
       }
     }
@@ -127,7 +127,7 @@ var parseJSON = function(json) {
     if (json[i] === '.') {
       i++;
       while (json[i] >= '0' && json[i] <= '9') {
-        checkForUnexpectedEndOfInput()
+        checkForUnexpectedEndOfInput();
         i++;
       }
     }
@@ -137,7 +137,7 @@ var parseJSON = function(json) {
         i++;
       }
       while (json[i] >= '0' && json[i] <= '9') {
-        checkForUnexpectedEndOfInput()
+        checkForUnexpectedEndOfInput();
         i++;
       }
     }
